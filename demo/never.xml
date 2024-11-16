@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>demo</name>
+    </assembly>
+    <members>
+        <member name="T:demo.Choose">
+            <summary>
+            Choose question
+            </summary>
+        </member>
+        <member name="M:demo.Choose.ans">
+            <summary>
+            choose between 1 or 2 or 3 or 4
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:demo.Essay">
+            <summary>
+            Essay question
+            </summary>
+        </member>
+        <member name="T:demo.Principle">
+            <summary>
+            function that add all class functions together that teacher can choose question and add to its list and student then answer these question and if not there will be no exam
+            </summary>
+        </member>
+        <member name="T:demo.Question">
+            <!-- No matching elements were found for the following include tag --><include file="explanation.xml" path="doc/members/member[@name=&quot;Question&quot;]/*" />
+        </member>
+        <member name="P:demo.Question.mark">
+            <value>Mark of each question</value>
+        </member>
+        <member name="P:demo.Question.q">
+            <value>Name of each question</value>
+        </member>
+        <member name="P:demo.Question.a">
+            <value>Answer of each question</value>
+        </member>
+        <member name="P:demo.Question.Name">
+            <value>Name of the question</value><remarks>
+            <see cref="T:demo.QuestionTorF" /> for true and false question
+            <see cref="T:demo.Essay" /> for essay question
+            <see cref="T:demo.Choose" />for choose question
+             </remarks>
+        </member>
+        <member name="M:demo.Question.#ctor">
+            <summary>
+            Question paramter can be null or not
+            </summary>
+        </member>
+        <member name="M:demo.Question.#ctor(System.String)">
+            <summary>
+            Question name of <paramref name="name" />
+            </summary><param name="name" />
+        </member>
+        <member name="M:demo.Question.quest">
+            <returns>return question name as string</returns>
+        </member>
+        <member name="M:demo.Question.ans">
+            <returns>return question answer as string</returns>
+        </member>
+        <member name="M:demo.Question.QuestionMark">
+            <returns>Return each question mark as int</returns>
+        </member>
+        <member name="T:demo.QuestionTorF">
+            <summary>
+            True or False question
+            </summary>
+        </member>
+        <member name="T:demo.Student">
+            <summary>
+            Student class enter exam and answer questions that teacher added it inside dictionary <see cref="F:demo.Teacher.TquesAnswers" />
+            </summary>
+        </member>
+        <member name="F:demo.Student.Sanswers">
+            <summary>
+            Dictionary of student answered questions
+            </summary>
+        </member>
+        <member name="M:demo.Student.Solve(System.Collections.Generic.Dictionary{System.Int32,demo.Question})">
+            <summary>
+            Teacher exam appear from <paramref name="TeacherExam" /> dictionary and student answer each question
+            and student answers added to <see cref="F:demo.Student.Sanswers" /> dictionary
+            </summary><remarks>if teacher has not put the exam yet , student can not start the exam </remarks><param name="TeacherExam" /><returns />
+        </member>
+        <member name="M:demo.Student.Compare(System.Collections.Generic.Dictionary{System.Int32,demo.Question})">
+            <summary>
+            method compare between teacher dictionary from <see cref="F:demo.Teacher.TquesAnswers" /> and student dictionary from <see cref="F:demo.Student.Sanswers" />
+            </summary><remarks>Note: if student id compatible with teacher id, student value compare with teacher value</remarks><param name="TeacherExam" />
+        </member>
+        <member name="M:demo.Student.total(demo.Teacher)">
+            <value>Student mark</value>
+        </member>
+        <member name="T:demo.Teacher">
+            <summary>
+            Teacher class
+            </summary><remarks>Teacher choose questions he wants and answer it</remarks>
+        </member>
+        <member name="F:demo.Teacher.allMark">
+            <value>Total mark of exam</value>
+        </member>
+        <member name="F:demo.Teacher.TquesAnswers">
+            <summary>
+            list of question teacher choose
+            <list>
+            <item>First question - </item>
+            <description>True or Flase question</description>
+            <item>Second question - </item>
+            <description>Essay question</description>
+            <item>Third question - </item>
+            <description>Choose question</description>
+            </list>
+            </summary><remarks>Teacher also answer these questions and each question he answers has id</remarks>
+        </member>
+        <member name="F:demo.Teacher.questions">
+            <summary>
+            list of questions:
+            <list>
+            <item>True or False question.</item>
+            <item>Choose question.</item>
+            <item>Essay question.</item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:demo.Teacher.EnrollQuestion(System.Int32,demo.Question)">
+            <summary>
+            Add question id from <paramref name="id" /> and question type from <paramref name="question" /> 
+            </summary><param name="id" /><param name="question" />
+        </member>
+        <member name="M:demo.Teacher.DipslayQuestions">
+            <summary>
+            Display question from question list <see cref="F:demo.Teacher.questions" />
+            </summary>
+        </member>
+        <member name="M:demo.Teacher.ChooseQuestion(System.Int32)">
+            <summary>
+            Teacher choose how many questions he wants to add  as <paramref name="request" /> and answer these questions
+            </summary><remarks>Questions and its answer put inside dictionary <see cref="F:demo.Teacher.TquesAnswers" /></remarks><param name="request" /><returns />
+        </member>
+    </members>
+</doc>
